@@ -9,5 +9,5 @@
   },
 
   "exclude": ["node_module"],
-  "include": ["scr/**/*"]
+  "include": ["src/**/*"]
 }
