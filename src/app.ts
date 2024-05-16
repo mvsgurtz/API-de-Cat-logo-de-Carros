@@ -1,5 +1,6 @@
 import express, { json } from "express";
 import "express-async-errors"
+import "dotenv/config";
 import { carRouter } from "./routes/car.routes";
 import { handleErrors } from "./middlewares/handleErrors.middleware";
 

@@ -10,7 +10,7 @@ class HandleErrors {
     next: NextFunction
   ): Response => {
     if (error instanceof ZodError) {
-      return res.status(400).json({ errors: error.errors });
+      return res.status(400).json({ errors: error.flatten().fieldErrors });
     }
     if (error instanceof AppError) {
       return res.status(error.statusCode).json({ message: error.message });
